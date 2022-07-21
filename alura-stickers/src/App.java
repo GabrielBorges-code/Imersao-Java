@@ -8,9 +8,12 @@ public class App {
         // String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060"; //IMDB
         // ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
 
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-05-17&end_date=2022-05-19"; // só mudar a data
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
+        // String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-05-17&end_date=2022-05-19"; // só mudar a data
+        // ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
         
+        String url = "http://localhost:8080/linguagens"; // só mudar a data
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDoIMDB();
+
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
 
@@ -18,7 +21,7 @@ public class App {
 
         var geradora = new GeradoraDeFigurinhas();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
 
             Conteudo conteudo = conteudos.get(i);
             
